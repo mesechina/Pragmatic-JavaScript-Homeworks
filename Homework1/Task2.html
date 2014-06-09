@@ -61,12 +61,12 @@
     <script>
         function intFunction() {
 
-            var a = prompt("enter number a:");
-            var b = prompt("enter number b:");
-            var sum = parseInt(a) + parseInt(b);
-            var subtr = parseInt(a) - parseInt(b);
-            var product = parseInt(a) * parseInt(b);
-            var modulus = parseInt(a) % parseInt(b);
+            var a = parseInt(prompt("enter number a:"));
+            var b = parseInt(prompt("enter number b:"));
+            var sum = a + b;
+            var subtr = a - b;
+            var product = a * b;
+            var modulus = a % b;
             document.getElementById("intSum").innerHTML = "The sum of " + a + " and " + b + " is " + sum;
             document.getElementById("intSubtr").innerHTML = "The difference between " + a + " and " + b + " is " + subtr;
             document.getElementById("intProduct").innerHTML = "The product of " + a + " and " + b + " is " + product;
@@ -74,12 +74,12 @@
         }
         function floatFunction() {
 
-            var a = prompt("enter number a:");
-            var b = prompt("enter number b:");
-            var sum = parseFloat(a) + parseFloat(b);
-            var subtr = parseFloat(a) - parseFloat(b);
-            var product = parseFloat(a) * parseFloat(b);
-            var modulus = parseFloat(a) % parseFloat(b);
+            var a = parseFloat(prompt("enter number a:"));
+            var b = parseFloat(prompt("enter number b:"));
+            var sum = a + b;
+            var subtr = a - b;
+            var product = a * b;
+            var modulus = a % b;
             document.getElementById("floatSum").innerHTML = "The sum of " + a + " and " + b + " is " + sum;
             document.getElementById("floatSubtr").innerHTML = "The difference between " + a + " and " + b + " is " + Math.round(subtr * 100) / 100;
             document.getElementById("floatProduct").innerHTML = "The product of " + a + " and " + b + " is " + Math.round(product * 100)/100;
