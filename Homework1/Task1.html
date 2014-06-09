@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task 1</title>
+    <style>
+        /*Да не вадя css-а в отделен файл*/
+
+        div {
+            background-color: #232323;
+            padding: 50px;
+            display: block;
+            margin: 100px auto;
+            width: 500px;
+            height: 150px;
+            text-align: center;
+            color: #fff;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            background: linear-gradient(#db002f,#620216);
+            border-radius: 5px;
+            color: #fff;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <p>Click the BIG RED BUTTON for simple number comparison</p>
+
+        <button onclick="myFunction()">BIG RED BUTTON</button>
+
+        <p id="text"></p>
+    </div>
+
+    <script>
+        function myFunction() {
+
+            var a = prompt("enter number a:");
+            var b = prompt("enter number b:");
+            var c = prompt("enter number c:");
+            if ((a < c) && (c < b) || (a > c) && (c > b)) {
+                document.getElementById("text").innerHTML = "Number " + c + " is between " + a + " and " + b;
+            }
+            else {
+                document.getElementById("text").innerHTML = "Number " + c + " is NOT between " + a + " and " + b;
+            }
+
+        }
+    </script>
+</body>
+</html>

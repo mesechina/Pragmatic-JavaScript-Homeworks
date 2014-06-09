@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task 3</title>
+    <style>
+        /*Да не вадя css-а в отделен файл*/
+
+        div {
+            background-color: #232323;
+            padding: 50px;
+            display: block;
+            margin: 100px auto;
+            width: 500px;
+            text-align: center;
+            color: #fff;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            background: linear-gradient(#db002f,#620216);
+            border-radius: 5px;
+            color: #fff;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Click the BIG RED BUTTON to swap the value of 3 integer numbers</p>
+
+        <button onclick="myFunction()">BIG RED BUTTON</button>
+
+        <p id="input"></p>
+        <p id="swap"></p>
+
+    </div>
+
+    <script>
+        function myFunction() {
+
+            var a = prompt("enter number a:");
+            var b = prompt("enter number b:");
+            document.getElementById("input").innerHTML = "You have entered a = " + a + " and b = " + b;
+            a = parseInt(a) + parseInt(b);
+            b = parseInt(a) - parseInt(b);
+            a = parseInt(a) - parseInt(b);
+            document.getElementById("swap").innerHTML = "After the swap a = " + a + " and b = " + b;
+            
+        }
+    </script>
+</body>
+</html>

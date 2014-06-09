@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Bozhana_Homework9</title>
+    <style>
+        div {
+            background-color: #242424;
+            background-image: url(dark_wood.png);
+            text-shadow: 0px 2px 3px #000;
+            color: #f5d468;
+            width: 350px;
+            height: 150px;
+            float: left;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            box-shadow: 3px 3px 4px #808080;
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+            color: #404040;
+            font-family: Verdana;
+            font-weight: 600;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            background: linear-gradient(#fff 50%, #c2c2c2 50%);
+            border: 1px solid #808080;
+            border-radius: 3px;
+        }
+
+
+
+        span {
+            color: #3ec42a;
+        }
+
+        p {
+            padding: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!------------------------------------
+                     Бутони
+     ------------------------------------>
+    <section>
+        <div>
+            <p>
+                Click the <span>Task1</span> button to print the numbers from 1 to 100
+            </p>
+            <button onclick="Task1()">Task1</button>
+        </div>
+        <!-------------------------------------------->
+        <div>
+            <p>Click the <span>Task2</span> button to print the numbers from -20 to 50 </p>
+            <button onclick="Task2()">Task2</button>
+        </div>
+        <!-------------------------------------------->
+        <div>
+            <p>Click the <span>Task3</span> button to print all odd numbers from -10 to 10</p>
+            <button onclick="Task3()">Task3</button>
+        </div>
+        <!-------------------------------------------->
+        <div>
+            <p>Click the <span>Task4</span> button to print the numbers from 10 to 1</p>
+            <button onclick="Task4()">Task4</button>
+        </div>
+        <!-------------------------------------------->
+        <div>
+            <p>Click the <span>Task5</span> button to add 2 numbers N and M and the program will print the numbers between them</p>
+            <button onclick="Task5()">Task5</button>
+        </div>
+        <!-------------------------------------------->
+        <div>
+            <p>Click the <span>Task5.ver.2</span> button to add 2 numbers N and M and the program will print the numbers between them</p>
+            <button onclick="Task5ver2()">Task5.ver.2</button>
+        </div>
+        <!-------------------------------------------->
+        <div>
+            <p>Click the <span>Task6</span> button to add a number N and the program will print the sum from 1 to N.  </p>
+            <button onclick="Task6()">Task6</button>
+        </div>
+        <!-------------------------------------------->
+        <div>
+            <p>Click the <span>Task7</span>button to add a number N and the program will find all the numbers that are not divisible to 3 and 7 . </p>
+            <button onclick="Task7()">Task7</button>
+        </div>
+        <!-------------------------------------------->
+        <div>
+            <p>Click the <span>Task8</span> button to add a number N and then to add more N numbers. The program will find the min and max number.</p>
+            <button onclick="Task8()">Task8</button>
+        </div>
+        <!-------------------------------------------->
+        <div>
+            <p>Click the <span>Task9</span> damn...@#$*^##@^#$@</p>
+            <button onclick="Task9()">Task9</button>
+        </div>
+        <!-------------------------------------------->
+        <div>
+            <p>Click the <span>Task10</span> ...@##$^%@#</p>
+            <button onclick="Task10()">Task10</button>
+        </div>
+        <!-------------------------------------------->
+        <div>
+            <p>Click the <span>Task11</span> button to start the loop</p>
+            <button onclick="Task11()">Task11</button>
+        </div>
+    </section>
+
+
+
+    <script>
+        // ======== Задача 1 ======
+        function Task1() {
+
+            var count = 1;
+
+            while (count <= 100) {
+                console.log(count);
+                count++;
+            }
+        }
+
+        //======= Задача 2 =======
+        function Task2() {
+
+            var count = -20;
+
+            while (count <= 50) {
+                console.log(count);
+                count++;
+            }
+        }
+        //======= Задача 3 =======
+        function Task3() {
+
+            for (var i = -10; i <= 10; i++) {
+                if (i % 2 != 0) {
+                    console.log(i);
+                }
+            }
+        }
+
+        //======= Задача 4 =======
+        function Task4() {
+
+            var count = 10;
+
+            while (count >= 1) {
+                console.log(count);
+                count--;
+            }
+        }
+        //====== Задача 5 вар. 1 =======
+        function Task5() {
+
+            var n = parseInt(prompt("enter number n: "));
+            var m = parseInt(prompt("enter number m: "));
+            if (n < m) {
+
+                for (var i = n; i <= m; i++) {
+                    console.log(i);
+                }
+            }
+
+            else {
+                for (var i = m; i <= n; i++) {
+                    console.log(i);
+
+                }
+            }
+        }
+        //====== Задача 5 вар. 2 ======
+        function Task5ver2() {
+
+            var n = parseInt(prompt("enter number n: "));
+            var m = parseInt(prompt("enter number m: "));
+
+            for (var i = Math.min(n, m), max = Math.max(n, m) ; i <= max; i++) {
+                console.log(i);
+            }
+        }
+        //====== Задача 6 ======
+        function Task6() {
+
+            var n = parseInt(prompt("enter number n: "));
+            var sum = 0;
+            for (var i = 1; i <= n; i++) {
+                sum += i;
+            }
+            console.log(sum);
+        }
+        //====== Задача 7 ======
+        function Task7() {
+
+            var n = parseInt(prompt("enter number n: "));
+            for (var i = 0; i <= n; i++) {
+                if (i % 3 != 0 && i % 7 != 0) {
+                    console.log(i);
+                }
+            }
+        }
+        //====== Задача 8 ======
+        function Task8() {
+
+            var n = parseInt(prompt("enter number n: "));
+            var arr = new Array();
+            for (var i = 0; i < n; i++) {
+                arr[i] = parseInt(prompt("enter " + n + " numbers"));
+            }
+            var max = Math.max.apply(Math, arr);
+            var min = Math.min.apply(Math, arr);
+            console.log("The biggest number is " + max + " and the smallest number is " + min);
+        }
+        //====== Задача 9 ======
+        function Task9() {
+
+            var n = parseInt(prompt("enter number n: "));
+            for (var i = 3; i <= n; i++) {
+                if (i % 3 == 0) {
+                    console.log(i);
+                    //не е довършена...
+                    //W$^%&&^@#$#$%$^%$^%$
+                }
+            }
+        }
+        //====== Задача 10 ======
+        function Task10() {
+
+            var n = parseInt(prompt("enter number n: "));
+            var m = parseInt(prompt("enter number m: "));
+
+            for (var i = Math.min(n, m), max = Math.max(n, m) ; i <= max; i++)
+                if (i % 3 == 0) {
+                }
+            console.log(Math.pow(i, 2));
+
+            // не е довършена
+            //W$^%&&^@#$#$%$^%$^%$
+        }
+        //====== Задача 11 ======
+        function Task11() {
+
+            var n = parseInt(prompt("enter number n: "));
+            var divider = 2;
+            var maxDivider = Math.sqrt(n);
+            var prime = true;
+            while (divider <= maxDivider) {
+
+                if (n % divider == 0) {
+                    prime = false;
+                    console.log("is " + n + " prime? ->" + prime);
+                }
+
+                divider++;
+            }
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>

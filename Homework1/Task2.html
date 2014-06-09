@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task 2</title>
+    <style>
+        /*Да не вадя css-а в отделен файл*/
+        div {
+            background-color: #232323;
+            padding: 50px;
+            display: block;
+            margin: 20px auto;
+            width: 500px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .orange_button {
+            width: 200px;
+            height: 50px;
+            background: linear-gradient(#ff6a00, #a73910);
+            border-radius: 5px;
+            color: #fff;
+            font-size: 0.8em;
+        }
+
+        .green_button {
+            width: 200px;
+            height: 50px;
+            background: linear-gradient(#4ab90f, #044e08);
+            border-radius: 5px;
+            color: #fff;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Click the BIG ORANGE BUTTON for simple integer calculations</p>
+
+        <button class="orange_button" onclick="intFunction()">BIG ORANGE BUTTON</button>
+
+
+        <p id="intSum"></p>
+        <p id="intSubtr"></p>
+        <p id="intProduct"></p>
+        <p id="intModulus"></p>
+    </div>
+    <div>
+        <p>Click the BIG GREEN BUTTON for simple floating point number calculations</p>
+
+        <button class="green_button" onclick="floatFunction()">BIG GREEN BUTTON</button>
+        <p id="floatSum"></p>
+        <p id="floatSubtr"></p>
+        <p id="floatProduct"></p>
+        <p id="floatModulus"></p>
+
+    </div>
+
+    <script>
+        function intFunction() {
+
+            var a = prompt("enter number a:");
+            var b = prompt("enter number b:");
+            var sum = parseInt(a) + parseInt(b);
+            var subtr = parseInt(a) - parseInt(b);
+            var product = parseInt(a) * parseInt(b);
+            var modulus = parseInt(a) % parseInt(b);
+            document.getElementById("intSum").innerHTML = "The sum of " + a + " and " + b + " is " + sum;
+            document.getElementById("intSubtr").innerHTML = "The difference between " + a + " and " + b + " is " + subtr;
+            document.getElementById("intProduct").innerHTML = "The product of " + a + " and " + b + " is " + product;
+            document.getElementById("intModulus").innerHTML = "The remainder of the division of " + a + " and " + b + " is " + modulus;
+        }
+        function floatFunction() {
+
+            var a = prompt("enter number a:");
+            var b = prompt("enter number b:");
+            var sum = parseFloat(a) + parseFloat(b);
+            var subtr = parseFloat(a) - parseFloat(b);
+            var product = parseFloat(a) * parseFloat(b);
+            var modulus = parseFloat(a) % parseFloat(b);
+            document.getElementById("floatSum").innerHTML = "The sum of " + a + " and " + b + " is " + sum;
+            document.getElementById("floatSubtr").innerHTML = "The difference between " + a + " and " + b + " is " + Math.round(subtr * 100) / 100;
+            document.getElementById("floatProduct").innerHTML = "The product of " + a + " and " + b + " is " + Math.round(product * 100)/100;
+            document.getElementById("floatModulus").innerHTML = "The remainder of the division of " + a + " and " + b + " is " + modulus;
+        }
+
+    </script>
+</body>
+</html>

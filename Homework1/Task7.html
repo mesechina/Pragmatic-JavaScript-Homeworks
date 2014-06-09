@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task7</title>
+    <style>
+        /*Да не вадя css-а в отделен файл*/
+
+        div {
+            background-color: #232323;
+            padding: 50px;
+            display: block;
+            margin: 100px auto;
+            width: 500px;
+            text-align: center;
+            color: #fff;
+        }
+
+        button {
+            margin: 30px;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(#db002f,#620216);
+            border:10px inset #000;
+            border-radius: 100%;
+            color: #fff;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Click the RED BUTTON to start a crazy Quiz</p>
+
+        <button onclick="myFunction()"> RED BUTTON</button>
+
+        <p id="text"></p>
+    </div>
+
+    <script>
+        function myFunction() {
+
+            var time = prompt("What time is it (0 - 24H)?");
+            var money = prompt("How much money do you have?");
+            var health = prompt("Are you healthy? (1 for YES | 2 for NO)");
+
+            //ВРЕМЕ ЗА ПИЕНЕ
+            if (time >= 18 && time <= 24) {
+                if (health == 1) {
+                    if (money <= 0) {
+                        document.getElementById("text").innerHTML = " NO MONEY NO FUNNEY! GET A JOB! OR IZMUFTI A FRIEND!";
+                    }
+                    else {
+                        document.getElementById("text").innerHTML = "GO TO DRINK! WORLD IS A BETTER PLACE THROUGH DRUNK EYES!";
+                    }
+                }
+                else if (health == 2) {
+
+                    if (money <= 0) {
+                        document.getElementById("text").innerHTML = "POOR YOU... GO FIND YOUR BABA'S ANTI KASHLICA TEA AND DRINK ONE";
+                    }
+                    else {
+                        document.getElementById("text").innerHTML = "GO BUY SOME LEKARSTVA (A.K.A GREIANA RAKIA/VINO) OR GO TO THE KRUCHMA";
+                    }
+
+                }
+
+            }
+                //РАБОТНО ВРЕМЕ
+            else if (time >= 8 && time <= 18) {
+                if (health == 1) {
+                    if (money <= 0) {
+                        document.getElementById("text").innerHTML = "WHY ARE YOU NOT WORKING?";
+                    }
+                    else {
+                        document.getElementById("text").innerHTML = "YOU SHOULD BE WORKING NOW! NO MATTER THAT YOU IMASH PARI!";
+                    }
+                }
+                else if (health == 2) {
+
+                    if (money <= 0) {
+
+                        document.getElementById("text").innerHTML = "SHANS! NO MONEY... NO HEALTH. POOR YOU! STAY SI U VAS I KROTUVAI";
+                    }
+                    else {
+                        document.getElementById("text").innerHTML = "YOU SHOULD NOT BE WORKING TODAY. GO TO THE LOCAL STORE AND BUY LEKARSTVA (RAKIA/VODKA/VINO)";
+                    }
+
+                }
+            }
+                //ВРЕМЕ ЗА СПАНЕ
+            else if (time < 8) {
+                if (health == 1) {
+                    if (money <= 0) {
+                        document.getElementById("text").innerHTML = "GO TO SLEEP";
+                    }
+                    else {
+                        document.getElementById("text").innerHTML = "IF YOU FEEL MLAD, ZDRAV, PRAV I KORAV- GO NA KUPON!";
+                    }
+                }
+                else if (health == 2) {
+
+                    if (money <= 0) {
+                        document.getElementById("text").innerHTML = "DRINK SOME BABA'S TEA AND GO TO SLEEP";
+                    }
+                    else {
+                        document.getElementById("text").innerHTML = "DRINK SOME LEKARSTVA AND GO TO SLEEP";
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+</body>
+</html>

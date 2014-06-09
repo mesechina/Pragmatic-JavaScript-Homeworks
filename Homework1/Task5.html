@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task5</title>
+    <style>
+        /*Да не вадя css-а в отделен файл*/
+
+        div {
+            background-color: #232323;
+            padding: 50px;
+            display: block;
+            margin: 100px auto;
+            width: 500px;
+            text-align: center;
+            color: #fff;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            background: linear-gradient(#fd4cff, #670775);
+            border-radius: 5px;
+            color: #fff;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Click the BIG PINK BUTTON to add 3 numbers. The program will sord them in descending order.</p>
+
+        <button onclick="myFunction()">BIG PINK BUTTON</button>
+
+        <p id="text"></p>
+    </div>
+
+    <script>
+        function myFunction() {
+            var a = prompt("enter number a: ");
+            var b = prompt("enter number b: ");
+            var c = prompt("enter number c: ");
+            var numbers = [a, b, c];
+            numbers.sort(function (a, b) { return b - a });
+            document.getElementById("text").innerHTML = numbers;
+        }
+    </script>
+</body>
+</html>

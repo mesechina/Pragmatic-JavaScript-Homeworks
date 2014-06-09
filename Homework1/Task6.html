@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task6</title>
+    <style>
+        /*Да не вадя css-а в отделен файл*/
+
+        div {
+            background-color: #232323;
+            padding: 50px;
+            display: block;
+            margin: 100px auto;
+            width: 500px;
+            text-align: center;
+            color: #fff;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            background: #232323;
+            border: 1px outset #272727;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Click the NO BUTTON BUTTON to swap the values of 3 numbers</p>
+
+        <button onclick="myFunction()">NO BUTTON</button>
+        <p id="input"></p>
+
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function myFunction() {
+
+            var a1 = prompt("enter number a: ");
+            var a2 = prompt("enter number b: ");
+            var a3 = prompt("enter number c: ");
+            document.getElementById("input").innerHTML = "a1 = " + a1 + " | a2 = " + a2 + " | a3 = " + a3;
+            var temp = a1;
+            a1 = a2;
+            a2 = a3;
+            a3 = temp;
+            document.getElementById("output").innerHTML = "a1 = " + a1 + " | a2 = " + a2 + " | a3 = " + a3;
+        }
+    </script>
+</body>
+</html>
