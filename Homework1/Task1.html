@@ -31,6 +31,9 @@
 <body>
 
     <div>
+<!------------------------------------
+                Button
+------------------------------------>
         <p>Click the BIG RED BUTTON for simple number comparison</p>
 
         <button onclick="myFunction()">BIG RED BUTTON</button>
@@ -41,9 +44,9 @@
     <script>
         function myFunction() {
 
-            var a = prompt("enter number a:");
-            var b = prompt("enter number b:");
-            var c = prompt("enter number c:");
+            var a = parseInt(prompt("enter number a:"));
+            var b = parseInt(prompt("enter number b:"));
+            var c = parseInt(prompt("enter number c:"));
             if ((a < c) && (c < b) || (a > c) && (c > b)) {
                 document.getElementById("text").innerHTML = "Number " + c + " is between " + a + " and " + b;
             }
