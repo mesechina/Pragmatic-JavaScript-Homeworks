@@ -1,0 +1,61 @@
+body {
+    background-image: url(images/bubbles.png);
+}
+
+div {
+    position: relative;
+}
+
+.divs {
+    background-color: #062b4f;
+    background-image: url(images/surface.jpg);
+    text-shadow: 2px 1px 3px #000;
+    color: #e8e8e8;
+    width: 350px;
+    height: 150px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button {
+    width: 120px;
+    height: 30px;
+    color: #000;
+    font-weight: 600;
+    font-size: 0.8em;
+    background: linear-gradient(#fff,#404040);
+    opacity: 0.7;
+    border-radius: 3px;
+    border: 1px solid #808080;
+}
+
+span {
+    color: #fa961a;
+}
+
+p {
+    padding: 0 0 10px 0;
+}
+
+#task_div {
+    background-color: #0e5b54;
+    height: 65px;
+    margin: 10px 10px 50px 10px;
+}
+
+#summer_div {
+    position: absolute;
+    top: 200px;
+    right: 600px;
+}
+
+h1 {
+    font-family: 'Arial Rounded MT';
+    font-size: 5em;
+    color: #062b4f;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+}
